@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+ require('./index.css');
 
 class App extends Component {
   componentDidMount() {
@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div>TEST</div>
+        <div className="test">TEST</div>
       </div>
     )
   }

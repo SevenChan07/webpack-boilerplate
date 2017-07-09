@@ -15,19 +15,27 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: false
+            }
+          }
+        ]
+      },
+      {
         test: /\.js?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
             presets: ["es2015", "react", "stage-0"]
         }
-      },{
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader'],
-        }),
-      }
+      },
     ]
   },
   plugins: [
