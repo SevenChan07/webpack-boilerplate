@@ -1,18 +1,40 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link
+} from 'react-router-dom'
 import './index.css';
 
-class App extends Component {
+
+class Entry extends Component {
   componentDidMount() {
   }
 
   render() {
     return (
-      <div>
-        <div className="test">TEST</div>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/about" component={About}/>
+        </Switch>
+      </Router>
     )
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const Home = () => (
+  <div>
+    <h2>Home</h2>
+  </div>
+)
+
+const About = () => (
+  <div>
+    <h2>About</h2>
+  </div>
+)
+
+ReactDOM.render(<Entry />, document.getElementById('root'));
