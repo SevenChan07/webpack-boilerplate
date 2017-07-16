@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
- require('./index.css');
+import './index.css';
 
 class App extends Component {
   componentDidMount() {
