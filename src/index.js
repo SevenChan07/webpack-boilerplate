@@ -27,7 +27,7 @@ class Entry extends Component {
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
+    <h2>Home1222</h2>
   </div>
 )
 
